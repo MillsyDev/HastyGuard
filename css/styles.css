@@ -24,8 +24,9 @@ header {
 }
 
 header .logo {
-    width: 150px;
+    width: 75px;
     float: center;
+    padding: -10px 0;
 }
 
 header nav {
