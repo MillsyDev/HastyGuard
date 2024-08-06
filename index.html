@@ -19,15 +19,17 @@
 
         .header {
             position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(75, 0, 130, 0.7);
+            top: 20px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
-            padding: 20px 0;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
         .fade-button {
@@ -51,15 +53,17 @@
         }
 
         .content {
-            margin-top: 100px; /* Space for the header */
+            margin-top: 240px; /* Space for the header */
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <a href="services.html" class="fade-button">Pricing</a>
-        <a href="about.html" class="fade-button">About Us</a>
-        <a href="contact.html" class="fade-button">Contact Us</a>
+        <nav>
+            <a href="services.html" class="fade-button">Pricing</a>
+            <a href="about.html" class="fade-button">About Us</a>
+            <a href="contact.html" class="fade-button">Contact Us</a>
+        </nav>
     </div>
     <div class="content">
         <!-- Page-specific content goes here -->
