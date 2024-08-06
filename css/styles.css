@@ -27,6 +27,7 @@ header .logo {
     width: 75px;
     float: middle;
     padding: -250px 0;
+    padding-left: -250
 }
 
 header nav {
