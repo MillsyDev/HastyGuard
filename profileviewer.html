@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypixel SkyBlock Profile Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        input {
+            width: 300px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .profile {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hypixel SkyBlock Profile Viewer</h1>
+    <input type="text" id="username" placeholder="Enter Minecraft Username">
+    <button onclick="fetchProfile()">Get Profile</button>
+
+    <div id="profile" class="profile"></div>
+
+    <script>
+        async function fetchProfile() {
+            const username = document.getElementById('username').value;
+            const apiKey = 'YOUR_API_KEY';
+
+            if (!username) {
+                alert('Please enter a username');
+                return;
+            }
+
+            try {
+                // Get player UUID
+                const playerResponse = await fetch(`https://api.hypixel.net/player?key=${apiKey}&name=${username}`);
+                const playerData = await playerResponse.json();
+
+                if (!playerData.success) {
+                    document.getElementById('profile').innerHTML = '<p>Error fetching player data.</p>';
+                    return;
+                }
+
+                const uuid = playerData.player.uuid;
+
+                // Get player SkyBlock profiles
+                const profileResponse = await fetch(`https://api.hypixel.net/skyblock/profiles?key=${apiKey}&uuid=${uuid}`);
+                const profileData = await profileResponse.json();
+
+                if (!profileData.success) {
+                    document.getElementById('profile').innerHTML = '<p>Error fetching SkyBlock profiles.</p>';
+                    return;
+                }
+
+                const profiles = profileData.profiles;
+                if (profiles.length === 0) {
+                    document.getElementById('profile').innerHTML = '<p>No SkyBlock profiles found.</p>';
+                    return;
+                }
+
+                // Display profile data (for simplicity, just showing the first profile)
+                const profile = profiles[0];
+                document.getElementById('profile').innerHTML = `
+                    <h2>Profile: ${profile.cute_name}</h2>
+                    <p>Profile ID: ${profile.profile_id}</p>
+                    <p>Last Save: ${new Date(profile.last_save * 1000).toLocaleString()}</p>
+                `;
+            } catch (error) {
+                document.getElementById('profile').innerHTML = '<p>Error fetching data. Please try again.</p>';
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>
