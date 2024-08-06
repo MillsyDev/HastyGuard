@@ -85,6 +85,36 @@
         .shield-button img:hover {
             transform: scale(1.2);
         }
+
+        .profile-viewer-button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 5px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50%;
+            transition: background-color 0.5s ease, transform 0.5s ease;
+            z-index: 1001;
+        }
+
+        .profile-viewer-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .profile-viewer-button img {
+            width: 24px;
+            height: 24px;
+        }
     </style>
 </head>
 <body>
@@ -100,5 +130,8 @@
         <h1>Welcome to My Website</h1>
         <p>This is a brief description of my website. Here you can find various services and information about our offerings.</p>
     </div>
+    <a href="profileviewer.html" class="profile-viewer-button" title="Profile Viewer">
+        <img src="images/profile-viewer-icon.png" alt="Profile Viewer">
+    </a>
 </body>
 </html>
