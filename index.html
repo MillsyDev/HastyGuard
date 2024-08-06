@@ -87,13 +87,38 @@
 
         .mission-statement {
             margin-top: 30px;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(10px);
             border-radius: 15px;
             padding: 20px;
             width: 100%;
             max-width: 600px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .mission-statement:hover {
+            transform: scale(1.05);
+        }
+
+        .learn-more-button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.5s ease, transform 0.5s ease;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .learn-more-button:hover {
+            background-color: transparent;
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -111,6 +136,7 @@
         <div class="mission-statement">
             <h2>Our Mission</h2>
             <p>We are committed to revolutionizing the insurance industry by eliminating hidden fees and unnecessary complexity. Our goal is to provide clear, transparent, and straightforward insurance solutions that prioritize your needs and peace of mind.</p>
+            <a href="services.html" class="learn-more-button">Learn More</a>
         </div>
     </div>
 </body>
