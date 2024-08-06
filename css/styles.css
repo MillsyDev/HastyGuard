@@ -1,85 +1,92 @@
-/* General Reset and Box-Sizing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html,body{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+#container{
+    width: 900px;
+    margin:0 auto;
+    background-color: #000;
+    min-height: 100%;
+}
+#city-wrap{
+    width: 900px;
+    height: 400px;
+    overflow: hidden;
+}
+.buildings{
+    transition: all 0.3s ease;
+    animation-duration: 60s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+#city-sky{
+    transform-origin: 580px 429px;
+    animation-name: sky;
+    transition: all 0.3s ease;
+    animation-duration: 800s;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+#city-l0{
+    animation-name: l0;
+}
+#city-l1{
+    animation-name: l1;
+}
+#city-l2{
+    animation-name: l2;
+}
+#city-l3{
+    animation-name: l3;
+}
+#city-l4{
+    animation-name: l4;
+}
+#city-l5{
+    animation-name: l5;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+@keyframes l0 {
+    0%   { transform: translateX(0) translateZ(0); }
+    25% { transform: translateX(-6px) translateZ(0); }
+    75% { transform: translateX(4px) translateZ(0); }
+    100% { transform: translateX(0px) translateZ(0); }
 }
-
-.container {
-    width: 80%;
-    margin: 0 auto;
+@keyframes l1 {
+    0%   { transform: translateX(0) translateZ(0); }
+    25% { transform: translateX(-10px) translateZ(0); }
+    75% { transform: translateX(10px) translateZ(0); }
+    100% { transform: translateX(0px) translateZ(0); }
 }
-
-header {
-    background: #004080;
-    color: #fff;
-    padding: 10px 0;
-    position: relative;
+@keyframes l2 {
+    0%   { transform: translateX(40px) translateZ(0); }
+    25% { transform: translateX(-12px) translateZ(0); }
+    75% { transform: translateX(85px) translateZ(0); }
+    100% { transform: translateX(40px) translateZ(0); }
 }
-
-header .logo {
-    width: 75px;
-    float: middle;
-    padding: -250px 0;
-    padding-left: -250px 0;
+@keyframes l3 {
+    0%   { transform: translateX(0) translateZ(0); }
+    25% { transform: translateX(-48px) translateZ(0); }
+    75% { transform: translateX(80px) translateZ(0); }
+    100% { transform: translateX(0px) translateZ(0); }
 }
-
-header nav {
-    float: center;
+@keyframes l4 {
+    0%   { transform: translateX(0) translateZ(0); }
+    25% { transform: translateX(-50px) translateZ(0); }
+    75% { transform: translateX(82px) translateZ(0); }
+    100% { transform: translateX(0px) translateZ(0); }
 }
-
-header nav ul {
-    list-style: none;
+@keyframes l5 {
+    0%   { transform: translateX(0) translateZ(0); }
+    25% { transform: translateX(-258px) translateZ(0); }
+    75% { transform: translateX(294px) translateZ(0); }
+    100% { transform: translateX(0px) translateZ(0); }
 }
-
-header nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.hero {
-    background: #f4f4f4;
-    text-align: center;
-    padding: 50px 0;
-}
-
-.hero h1 {
-    font-size: 2.5em;
-}
-
-.hero p {
-    font-size: 1.2em;
-}
-
-.intro, .about, .services, .contact {
-    padding: 20px;
-    text-align: center;
-}
-
-footer {
-    background: #004080;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
+@keyframes sky {
+    0%   { transform: rotate(0deg) translateZ(0); }
+    100% { transform: rotate(360deg) translateZ(0); }
 }
