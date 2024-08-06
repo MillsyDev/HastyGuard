@@ -20,11 +20,12 @@
         .header {
             position: fixed;
             top: 20px;
-            width: 200px;
-            height: 200px;
+            width: 80%;
+            max-width: 800px;
+            padding: 15px;
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
-            border-radius: 50%;
+            border-radius: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -53,17 +54,15 @@
         }
 
         .content {
-            margin-top: 240px; /* Space for the header */
+            margin-top: 100px; /* Space for the header */
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <nav>
-            <a href="services.html" class="fade-button">Pricing</a>
-            <a href="about.html" class="fade-button">About Us</a>
-            <a href="contact.html" class="fade-button">Contact Us</a>
-        </nav>
+        <a href="services.html" class="fade-button">Pricing</a>
+        <a href="about.html" class="fade-button">About Us</a>
+        <a href="contact.html" class="fade-button">Contact Us</a>
     </div>
     <div class="content">
         <!-- Page-specific content goes here -->
