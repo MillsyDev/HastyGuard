@@ -36,6 +36,10 @@
 
         .profile {
             margin-top: 20px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -85,10 +89,75 @@
 
                 // Display profile data (for simplicity, just showing the first profile)
                 const profile = profiles[0];
+                const profileName = profile.cute_name;
+                const profileId = profile.profile_id;
+                const lastSave = new Date(profile.last_save).toLocaleString();
+
+                let skills = "";
+                if (profile.members[uuid].experience_skill_farming !== undefined) {
+                    skills = `
+                        <h3>Skills</h3>
+                        <p>Farming: ${Math.floor(profile.members[uuid].experience_skill_farming / 100) / 100}</p>
+                        <p>Mining: ${Math.floor(profile.members[uuid].experience_skill_mining / 100) / 100}</p>
+                        <p>Combat: ${Math.floor(profile.members[uuid].experience_skill_combat / 100) / 100}</p>
+                        <p>Foraging: ${Math.floor(profile.members[uuid].experience_skill_foraging / 100) / 100}</p>
+                        <p>Fishing: ${Math.floor(profile.members[uuid].experience_skill_fishing / 100) / 100}</p>
+                        <p>Enchanting: ${Math.floor(profile.members[uuid].experience_skill_enchanting / 100) / 100}</p>
+                        <p>Alchemy: ${Math.floor(profile.members[uuid].experience_skill_alchemy / 100) / 100}</p>
+                        <p>Taming: ${Math.floor(profile.members[uuid].experience_skill_taming / 100) / 100}</p>
+                    `;
+                }
+
+                let inventory = "";
+                if (profile.members[uuid].inv_contents !== undefined) {
+                    inventory = `
+                        <h3>Inventory</h3>
+                        <p>${JSON.stringify(profile.members[uuid].inv_contents)}</p>
+                    `;
+                }
+
+                let wardrobe = "";
+                if (profile.members[uuid].wardrobe_contents !== undefined) {
+                    wardrobe = `
+                        <h3>Wardrobe</h3>
+                        <p>${JSON.stringify(profile.members[uuid].wardrobe_contents)}</p>
+                    `;
+                }
+
+                let magicPower = "";
+                if (profile.members[uuid].magic_power !== undefined) {
+                    magicPower = `
+                        <h3>Magic Power</h3>
+                        <p>${profile.members[uuid].magic_power}</p>
+                    `;
+                }
+
+                let currentArmor = "";
+                if (profile.members[uuid].inv_armor !== undefined) {
+                    currentArmor = `
+                        <h3>Current Armor</h3>
+                        <p>${JSON.stringify(profile.members[uuid].inv_armor)}</p>
+                    `;
+                }
+
+                let accessoryBag = "";
+                if (profile.members[uuid].talisman_bag !== undefined) {
+                    accessoryBag = `
+                        <h3>Accessory Bag</h3>
+                        <p>${JSON.stringify(profile.members[uuid].talisman_bag)}</p>
+                    `;
+                }
+
                 document.getElementById('profile').innerHTML = `
-                    <h2>Profile: ${profile.cute_name}</h2>
-                    <p>Profile ID: ${profile.profile_id}</p>
-                    <p>Last Save: ${new Date(profile.last_save * 1000).toLocaleString()}</p>
+                    <h2>Profile: ${profileName}</h2>
+                    <p>Profile ID: ${profileId}</p>
+                    <p>Last Save: ${lastSave}</p>
+                    ${skills}
+                    ${inventory}
+                    ${wardrobe}
+                    ${magicPower}
+                    ${currentArmor}
+                    ${accessoryBag}
                 `;
             } catch (error) {
                 document.getElementById('profile').innerHTML = '<p>Error fetching data. Please try again.</p>';
