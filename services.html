@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services</title>
-    <title>Services</title>
     <style>
         body {
             background: linear-gradient(to bottom, #4B0082, #000000);
@@ -13,7 +12,6 @@
             color: white;
             display: flex;
             justify-content: center;
-            flex-direction: column;
             align-items: center;
             text-align: center;
             height: 100vh;
@@ -21,9 +19,11 @@
         .header {
             position: fixed;
             top: 20px;
+            padding: 5px 20px;
             padding: 5px 10px;
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
+            border-radius: 15px;
             border-radius: 10px;
             display: flex;
             justify-content: center;
@@ -34,8 +34,10 @@
         .header a {
             color: white;
             text-decoration: none;
+            margin: 0 10px;
             margin: 0 5px;
         }
+
         .fade-button {
             background-color: transparent;
             border: 2px solid white;
@@ -48,51 +50,40 @@
             cursor: pointer;
             transition: background-color 0.5s ease, transform 0.5s ease;
             border-radius: 5px;
+            margin: 0 10px;
             margin: 0 5px;
         }
+
         .fade-button:hover {
             background-color: transparent;
             transform: scale(1.1);
         }
-
         .content {
             margin-top: 100px;
-            margin-top: 150px;
             padding: 20px;
             width: 80%;
             max-width: 1000px;
         }
-
         .plan-container {
             display: flex;
             justify-content: space-around;
             gap: 20px;
         }
-
         .plan-box {
             background: rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(10px);
             border-radius: 15px;
             padding: 20px;
             width: 45%;
-            margin: 20px 0;
-            width: 80%;
-            max-width: 400px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
-
         .plan-box h2 {
             margin-top: 0;
-            margin: 0;
-            padding-bottom: 10px;
         }
-
         .plan-box p {
             font-size: 18px;
             line-height: 1.6;
         }
-
         .plan-box button {
             background-color: transparent;
             border: 2px solid white;
@@ -107,12 +98,9 @@
             border-radius: 5px;
             margin-top: 10px;
         }
-
         .plan-box button:hover {
             background-color: transparent;
-            margin: 0;
         }
-
         .shield-button {
             background: none;
             border: none;
@@ -131,36 +119,6 @@
         .shield-button img:hover {
             transform: scale(1.2);
         }
-
-        .profile-viewer-button {
-            background-color: transparent;
-            color: white;
-            padding: 3px;
-            width: 30px; /* Smaller size */
-            height: 30px; /* Smaller size */
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            cursor: pointer;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            border-radius: 50%;
-            transition: background-color 0.5s ease, transform 0.5s ease;
-            z-index: 1001;
-            border: none; /* Remove the border */
-        }
-
-        .profile-viewer-button:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: scale(1.1);
-        }
-
-        .profile-viewer-button img {
-            width: 20px; /* Smaller icon size */
-            height: 20px; /* Smaller icon size */
-        }
     </style>
 </head>
 <body>
@@ -173,7 +131,7 @@
         <a href="contact.html" class="fade-button">Contact Us</a>
     </div>
     <div class="content">
-        <h1></h1>
+        <h1>Our Plans</h1>
         <div class="plan-container">
             <div class="plan-box">
                 <h2>Basic Plan</h2>
@@ -187,21 +145,8 @@
                 <p id="premium-price">Price: $20 AUD</p>
                 <button>Learn More</button>
             </div>
-        <h1>Our Services</h1>
-        <div class="plan-box">
-            <h2>Basic Plan</h2>
-            <p>Price: $10 AUD</p>
-            <p>Description of basic plan features.</p>
-        </div>
-        <div class="plan-box">
-            <h2>Premium Plan</h2>
-            <p>Price: $20 AUD</p>
-            <p>Description of premium plan features.</p>
         </div>
     </div>
     <script src="scripts.js"></script> <!-- Link to the external JavaScript file -->
-    <a href="profileviewer.html" class="profile-viewer-button" title="Profile Viewer">
-        <img src="images/viewer.png" alt="Profile Viewer">
-    </a>
 </body>
 </html>
