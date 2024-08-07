@@ -1,23 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gradient Background Example</title>
-    <style>
-        body {
-            background: linear-gradient(to bottom, #4B0082, #000000);
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to My Website</h1>
-</body>
-</html>
+.content {
+    margin-top: 150px;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between plan boxes */
+}
+
+.plan-box {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%; /* Default to full width for small screens */
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+    .content {
+        flex-wrap: nowrap;
+        justify-content: space-around; /* Distribute space evenly */
+    }
+
+    .plan-box {
+        width: calc(50% - 20px); /* Two boxes per row with a gap */
+    }
+}
+
+@media (min-width: 1200px) {
+    .plan-box {
+        width: calc(25% - 20px); /* Four boxes per row with a gap */
+    }
+}
