@@ -121,4 +121,64 @@
             cursor: pointer;
             transition: background-color 0.5s ease, transform 0.5s ease;
             border-radius: 5px;
-       
+        }
+
+        .contact-form button:hover {
+            background-color: transparent;
+            transform: scale(1.1);
+        }
+
+        .profile-viewer-button {
+            background-color: transparent;
+            color: white;
+            padding: 3px;
+            width: 30px; /* Smaller size */
+            height: 30px; /* Smaller size */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50%;
+            transition: background-color 0.5s ease, transform 0.5s ease;
+            z-index: 1001;
+            border: none; /* Remove the border */
+        }
+
+        .profile-viewer-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .profile-viewer-button img {
+            width: 20px; /* Smaller icon size */
+            height: 20px; /* Smaller icon size */
+        }
+    </style>
+</head>
+<body>
+    <button class="shield-button" onclick="location.href='index.html'">
+        <img src="images/purple-shield-with-purple-shield-it_662214-111258-removebg-preview.png" alt="Home">
+    </button>
+    <div class="header">
+        <a href="services.html" class="fade-button">Pricing</a>
+        <a href="about.html" class="fade-button">About Us</a>
+        <a href="contact.html" class="fade-button">Contact Us</a>
+    </div>
+    <div class="content">
+        <h1>Contact Us</h1>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <a href="profileviewer.html" class="profile-viewer-button" title="Profile Viewer">
+        <img src="images/viewer.png" alt="Profile Viewer">
+    </a>
+</body>
+</html>
