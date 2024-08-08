@@ -13,61 +13,6 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            flex-direction: column;
-        }
-        .header {
-            position: fixed;
-            top: 20px;
-            padding: 5px 10px;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-        .header a {
-            color: white;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-        .fade-button {
-            background-color: transparent;
-            border: 2px solid white;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.5s ease, transform 0.5s ease;
-            border-radius: 5px;
-            margin: 0 5px;
-        }
-        .fade-button:hover {
-            background-color: transparent;
-            transform: scale(1.1);
-        }
-        .shield-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            outline: none;
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1001;
-        }
-        .shield-button img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s ease;
-        }
-        .shield-button img:hover {
-            transform: scale(1.2);
         }
         .container {
             background-color: rgba(255, 255, 255, 0.9);
@@ -75,7 +20,6 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
-            margin-top: 80px; /* Add margin to avoid overlap with header */
         }
         .container h2 {
             text-align: center;
@@ -108,13 +52,6 @@
     </style>
 </head>
 <body>
-    <button class="shield-button" onclick="location.href='index.html'">
-        <img src="images/purple-shield-with-purple-shield-it_662214-111258-removebg-preview.png" alt="Home">
-    </button>
-    <div class="header">
-        <a href="signup.html" class="fade-button">Sign Up</a>
-        <a href="login.html" class="fade-button">Log In</a>
-    </div>
     <div class="container">
         <h2>Log In</h2>
         <form>
