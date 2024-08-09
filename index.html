@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HastyGuard - Home</title>
+    <title>Index</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,20 +28,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 10px 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            height: 120px;
+            height: 60px;
         }
 
         .header a {
             text-decoration: none;
             color: #007bff;
-            margin: 0 20px;
-            padding: 16px 32px;
+            margin: 0 10px;
+            padding: 8px 16px;
             border: 2px solid transparent;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 14px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -54,10 +54,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 160px; /* Adjusted to account for the fixed header */
+            margin-top: 100px; /* Adjusted to account for the fixed header */
             padding: 20px;
             width: 100%;
-            height: calc(100vh - 180px); /* Leaving a gap at the bottom */
+            height: calc(100vh - 120px); /* Leaving a gap at the bottom */
         }
 
         .text-section {
@@ -66,7 +66,7 @@
         }
 
         .text-section h1 {
-            font-size: 48px;
+            font-size: 36px;
             color: white;
             margin: 0;
             line-height: 1.2;
@@ -75,7 +75,23 @@
         .text-section p {
             font-size: 20px;
             color: white;
-            margin: 20px 0 0 0;
+            margin: 20px 0;
+        }
+
+        .text-section button {
+            padding: 12px 24px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .text-section button:hover {
+            background-color: #0056b3;
         }
 
         .image-section {
@@ -142,6 +158,7 @@
         <div class="text-section">
             <h1>Join the insurance built for you</h1>
             <p>Experience affordable, reliable, and comprehensive coverage tailored to your needs.</p>
+            <button onclick="location.href='signup.html'">Sign Up Now</button>
         </div>
         <div class="image-section">
             <img src="images/placeholder.png" alt="Placeholder Image">
