@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>HastyGuard - Home</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom right, #add8e6, #000000);
             margin: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
             height: 100vh;
+            box-sizing: border-box;
         }
 
         .header {
@@ -26,18 +28,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 20px 40px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
+            height: 120px;
         }
 
         .header a {
             text-decoration: none;
             color: #007bff;
-            margin: 0 10px;
-            padding: 8px 16px;
+            margin: 0 20px;
+            padding: 16px 32px;
             border: 2px solid transparent;
             border-radius: 5px;
+            font-size: 18px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -47,32 +51,46 @@
         }
 
         .content {
-            margin-top: 150px; /* Adjusted to account for the fixed header */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 160px; /* Adjusted to account for the fixed header */
             padding: 20px;
-            width: 80%;
-            max-width: 1000px;
-            text-align: center;
+            width: 100%;
+            height: calc(100vh - 180px); /* Leaving a gap at the bottom */
         }
 
-        .shield-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            outline: none;
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1001;
+        .text-section {
+            width: 50%;
+            padding-right: 20px;
         }
 
-        .shield-button img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s ease;
+        .text-section h1 {
+            font-size: 48px;
+            color: white;
+            margin: 0;
+            line-height: 1.2;
         }
 
-        .shield-button img:hover {
-            transform: scale(1.2);
+        .text-section p {
+            font-size: 20px;
+            color: white;
+            margin: 20px 0 0 0;
+        }
+
+        .image-section {
+            width: 50%;
+            padding-left: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
 
         .profile-viewer-button {
@@ -121,8 +139,13 @@
     </div>
 
     <div class="content">
-        <h1>Welcome to HastyGuard</h1>
-        <p>HastyGuard is your affordable insurance partner, dedicated to providing reliable and comprehensive coverage at competitive rates. Our mission is to offer peace of mind with policies designed to meet your needs without breaking the bank. Explore our services to find the perfect plan for you and experience the exceptional support we provide. Thank you for choosing HastyGuard!</p>
+        <div class="text-section">
+            <h1>Join the insurance built for you</h1>
+            <p>Experience affordable, reliable, and comprehensive coverage tailored to your needs.</p>
+        </div>
+        <div class="image-section">
+            <img src="images/placeholder.png" alt="Placeholder Image">
+        </div>
     </div>
 
     <a href="profileviewer.html" class="profile-viewer-button" title="Profile Viewer">
