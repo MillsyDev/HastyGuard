@@ -57,6 +57,12 @@
             color: white;
         }
 
+        .header .logo {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            margin-left: 10px; /* Space between logo and login button */
+        }
+
         .content {
             margin-top: 80px; /* Adjusted to account for the fixed header */
             padding: 20px;
@@ -75,34 +81,9 @@
             line-height: 1.6;
             margin: 20px 0;
         }
-
-        .shield-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            outline: none;
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            z-index: 1001;
-        }
-
-        .shield-button img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s ease;
-        }
-
-        .shield-button img:hover {
-            transform: scale(1.2);
-        }
     </style>
 </head>
 <body>
-    <button class="shield-button" onclick="location.href='index.html'">
-        <img src="images/purple-shield-with-purple-shield-it_662214-111258-removebg-preview.png" alt="Home">
-    </button>
-    
     <div class="header">
         <div class="nav-left">
             <a href="index.html">Home</a>
@@ -112,6 +93,7 @@
         </div>
         <div class="nav-right">
             <a href="login.html">Login</a>
+            <img src="images/logo.png" alt="Logo" class="logo">
             <a href="signup.html">Sign Up</a>
         </div>
     </div>
