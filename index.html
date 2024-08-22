@@ -142,4 +142,42 @@
 
         .profile-viewer-button:hover {
             background-color: rgba(255, 255, 255, 0.2);
-            transform:
+            transform: scale(1.1);
+        }
+
+        .profile-viewer-button img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="services.html">Pricing</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="nav-right">
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="text-section">
+            <h1>Join the insurance built for you</h1>
+            <p>Experience affordable, reliable, and comprehensive coverage tailored to your needs.</p>
+            <button onclick="location.href='signup.html'">Sign Up Now</button>
+        </div>
+        <div class="image-section">
+            <img src="images/placeholder.gif" alt="Placeholder Image">
+        </div>
+    </div>
+
+    <a href="profileviewer.html" class="profile-viewer-button" title="Profile Viewer">
+        <img src="images/viewer.png" alt="Profile Viewer">
+    </a>
+</body>
+</html>
