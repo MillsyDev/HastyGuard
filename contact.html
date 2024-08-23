@@ -5,84 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
-        body {
-            background: linear-gradient(to bottom, #4B0082, #000000);
+        html, body {
+            height: 100%;
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #add8e6, #000000);
             color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .header {
             position: fixed;
-            top: 20px;
-            padding: 5px 10px;
-            background: rgba(255, 255, 255, 0.7);
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
-            border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            height: 60px;
+        }
+
+        .header .nav-left {
+            display: flex;
+            align-items: center;
+            flex-grow: 1; /* Push logo to the center */
+        }
+
+        .header .nav-right {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
         }
 
         .header a {
-            color: white;
             text-decoration: none;
-            margin: 0 5px;
-        }
-
-        .fade-button {
-            background-color: transparent;
-            border: 2px solid white;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.5s ease, transform 0.5s ease;
+            color: #007bff;
+            margin: 0 10px;
+            padding: 8px 16px;
+            border: 2px solid transparent;
             border-radius: 5px;
-            margin: 0 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .fade-button:hover {
-            background-color: transparent;
-            transform: scale(1.1);
+        .header a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .header .logo {
+            width: 120px; /* Triple the original width */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0 auto; /* Center the logo */
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%); /* Center horizontally */
         }
 
         .content {
-            margin-top: 150px;
+            margin-top: 80px; /* Adjusted to account for the fixed header */
             padding: 20px;
             width: 80%;
             max-width: 1000px;
-        }
-
-        .shield-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            outline: none;
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1001;
-        }
-
-        .shield-button img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s ease;
-        }
-
-        .shield-button img:hover {
-            transform: scale(1.2);
         }
 
         .contact-form {
@@ -124,7 +123,7 @@
         }
 
         .contact-form button:hover {
-            background-color: transparent;
+            background-color: rgba(255, 255, 255, 0.2);
             transform: scale(1.1);
         }
 
@@ -132,8 +131,8 @@
             background-color: transparent;
             color: white;
             padding: 3px;
-            width: 30px; /* Smaller size */
-            height: 30px; /* Smaller size */
+            width: 30px;
+            height: 30px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -145,7 +144,7 @@
             border-radius: 50%;
             transition: background-color 0.5s ease, transform 0.5s ease;
             z-index: 1001;
-            border: none; /* Remove the border */
+            border: none;
         }
 
         .profile-viewer-button:hover {
@@ -154,20 +153,26 @@
         }
 
         .profile-viewer-button img {
-            width: 20px; /* Smaller icon size */
-            height: 20px; /* Smaller icon size */
+            width: 20px;
+            height: 20px;
         }
     </style>
 </head>
 <body>
-    <button class="shield-button" onclick="location.href='index.html'">
-        <img src="images/purple-shield-with-purple-shield-it_662214-111258-removebg-preview.png" alt="Home">
-    </button>
     <div class="header">
-        <a href="services.html" class="fade-button">Pricing</a>
-        <a href="about.html" class="fade-button">About Us</a>
-        <a href="contact.html" class="fade-button">Contact Us</a>
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="services.html">Pricing</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="nav-right">
+            <a href="login.html">Login</a>
+            <a href="signup.html" style="margin-left: 40px;">Sign Up</a>
+        </div>
     </div>
+
     <div class="content">
         <h1>Contact Us</h1>
         <form class="contact-form" action="mailto:HastyGuard@gmail.com" method="post" enctype="text/plain">
@@ -177,6 +182,7 @@
             <button type="submit">Send Message</button>
         </form>
     </div>
+
     <a href="profileviewer.html" class="profile-viewer-button" title="Profile Viewer">
         <img src="images/viewer.png" alt="Profile Viewer">
     </a>
