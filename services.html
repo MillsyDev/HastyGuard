@@ -31,12 +31,17 @@
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 10px 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
+            height: 80px;
+        }
+
+        .header img {
             height: 60px;
+            margin-right: 20px;
         }
 
         .header .nav-left, .header .nav-right {
@@ -61,7 +66,7 @@
         }
 
         .content {
-            margin-top: 80px; /* Adjusted to account for the fixed header */
+            margin-top: 100px; /* Adjusted to account for the fixed header */
             padding: 20px;
             width: 100%;
             max-width: 1000px;
@@ -116,10 +121,41 @@
             color: blue;
             border-color: blue;
         }
+
+        .profile-viewer-button {
+            background-color: transparent;
+            color: white;
+            padding: 3px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50%;
+            transition: background-color 0.5s ease, transform 0.5s ease;
+            z-index: 1001;
+            border: none;
+        }
+
+        .profile-viewer-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .profile-viewer-button img {
+            width: 20px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="header">
+        <img src="https://raw.githubusercontent.com/MillsyDev/HastyGuard/main/images/logo.png" alt="Logo">
         <div class="nav-left">
             <a href="index.html">Home</a>
             <a href="services.html">Pricing</a>
@@ -128,7 +164,7 @@
         </div>
         <div class="nav-right">
             <a href="login.html">Sign In</a>
-            <a href="signup.html">Sign Up</a>
+            <a href="signup.html" style="margin-left: 20px;">Sign Up</a> <!-- Adjusted spacing for Sign Up -->
         </div>
     </div>
     <div class="content">
@@ -149,5 +185,6 @@
             </div>
         </div>
     </div>
+    <!-- Removed the profile viewer button as requested -->
 </body>
 </html>
