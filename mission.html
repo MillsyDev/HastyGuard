@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HastyGuard - Mission Statement</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #add8e6, #000000);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            height: 60px;
+        }
+
+        .header .nav-left, .header .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 10px;
+            padding: 8px 16px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .header a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .content {
+            margin-top: 80px; /* Adjusted to account for the fixed header */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 20px;
+            color: white;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="services.html">Pricing</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="nav-right">
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Our Mission Statement</h1>
+        <p>Hasty Guard is committed to providing reliable and comprehensive insurance solutions that protect what matters most. We build lasting relationships with our clients by delivering exceptional customer service and earning their trust through transparency, integrity, and prompt response to their needs. At Hasty Guard, your security is our priority, and we are dedicated to being a steadfast partner in safeguarding your future.</p>
+    </div>
+</body>
+</html>
