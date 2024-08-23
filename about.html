@@ -33,7 +33,6 @@
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
             display: flex;
-            justify-content: center; /* Center the logo */
             align-items: center;
             padding: 10px 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -41,19 +40,17 @@
             height: 60px; /* Original header height */
         }
 
-        .header .nav-left, .header .nav-right {
+        .header .nav-left {
             display: flex;
             align-items: center;
-        }
-
-        .header .nav-left {
-            position: absolute;
-            left: 20px;
+            flex-grow: 1; /* Push logo to the center */
+            margin-left: 20px;
         }
 
         .header .nav-right {
-            position: absolute;
-            right: 20px;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
         }
 
         .header a {
@@ -76,6 +73,9 @@
             width: 120px; /* Triple the original width */
             height: auto; /* Maintain aspect ratio */
             margin: 0 auto; /* Center the logo */
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%); /* Center horizontally */
         }
 
         .content {
@@ -108,7 +108,7 @@
             cursor: pointer;
             transition: background-color 0.5s ease, transform 0.5s ease;
             border-radius: 5px;
-            margin: 10px 5px;
+            margin: 10px 20px; /* Increased spacing from the edge */
         }
 
         .fade-button:hover {
@@ -128,7 +128,7 @@
         <img src="images/logo.png" alt="Logo" class="logo">
         <div class="nav-right">
             <a href="login.html">Login</a>
-            <a href="signup.html" style="margin-left: 20px;">Sign Up</a>
+            <a href="signup.html" style="margin-left: 40px;">Sign Up</a> <!-- Increased margin -->
         </div>
     </div>
 
