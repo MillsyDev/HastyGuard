@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>HastyGuard - About Us</title>
     <style>
         html, body {
             height: 100%;
-        body {
-            background: linear-gradient(to bottom, #4B0082, #000000);
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
+        }
+
+        body {
             background: linear-gradient(to bottom right, #add8e6, #000000);
             color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white;
             overflow-x: hidden; /* Prevent horizontal scrolling */
             text-align: center;
             height: 100vh;
@@ -31,11 +31,7 @@
             left: 0;
             width: 100%;
             background: rgba(255, 255, 255, 0.8);
-            top: 20px;
-            padding: 5px 10px;
-            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
-            border-radius: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -43,23 +39,16 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             height: 60px;
-            width: calc(100% - 40px);
-            left: 20px;
-            right: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
         .header .nav-left, .header .nav-right {
-        .nav-left, .nav-right {
             display: flex;
             align-items: center;
         }
 
         .header a {
-            color: white;
             text-decoration: none;
             color: #007bff;
-            margin: 0 10px;
             margin: 0 5px;
             padding: 8px 16px;
             border: 2px solid transparent;
@@ -67,6 +56,7 @@
             font-size: 14px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
+
         .header a:hover {
             background-color: #007bff;
             color: white;
@@ -76,8 +66,6 @@
             width: 40px; /* Adjust as needed */
             height: 40px; /* Adjust as needed */
             margin-left: 10px; /* Space between logo and login button */
-        .logo {
-            margin-right: 10px;
         }
 
         .content {
@@ -85,6 +73,19 @@
             padding: 20px;
             width: 80%;
             max-width: 1000px;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
         .fade-button {
             background-color: transparent;
             border: 2px solid white;
@@ -97,26 +98,12 @@
             cursor: pointer;
             transition: background-color 0.5s ease, transform 0.5s ease;
             border-radius: 5px;
-            margin: 0 5px;
+            margin: 10px 5px;
         }
 
-        .content h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
         .fade-button:hover {
-            background-color: transparent;
+            background-color: rgba(255, 255, 255, 0.2);
             transform: scale(1.1);
-        }
-
-        .content p {
-            font-size: 20px;
-            line-height: 1.6;
-            margin: 20px 0;
-        .content {
-            margin-top: 100px;
-            padding: 20px;
-            width: 80%;
-            max-width: 800px;
         }
     </style>
 </head>
@@ -143,5 +130,3 @@
     </div>
 </body>
 </html>
-            <a href="services.html" class="fade-button">Pricing</a>
-            <a href
