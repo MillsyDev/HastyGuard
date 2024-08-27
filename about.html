@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HastyGuard - About Us</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon link -->
+    <link rel="icon" href="https://raw.githubusercontent.com/MillsyDev/HastyGuard/main/images/icon.png" type="image/png">
     <style>
         html, body {
             height: 100%;
@@ -16,15 +16,15 @@
 
         body {
             background: linear-gradient(to right, #add8e6, #000000);
-            background-size: 200% 100%; /* Double the width for horizontal repeat */
-            background-repeat: repeat-x; /* Repeat horizontally */
+            background-size: 200% 100%;
+            background-repeat: repeat-x;
             color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             min-height: 100vh;
-            padding-bottom: 20px; /* Ensure spacing at the bottom */
+            padding-bottom: 20px;
         }
 
         .header {
@@ -189,7 +189,6 @@
             content.style.display = content.style.display === "none" ? "block" : "none";
         }
 
-        // Initialize all sections as closed
         document.querySelectorAll('.faq-content').forEach(content => {
             content.style.display = 'none';
         });
