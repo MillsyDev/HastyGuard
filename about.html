@@ -11,31 +11,19 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
-            background-color: #000000;
-            color: white;
         }
 
         body {
+            background: linear-gradient(180deg, #add8e6 0%, #000000 100%);
+            background-size: auto 100vh;
+            background-repeat: repeat-y;
+            color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
             min-height: 100vh;
-            background: url('your-background-image.jpg') repeat-y center center / cover;
-            background-size: 100% 200%; /* Double the height */
-            background-position: top; /* Start from the top */
-            animation: seamless-scroll 10s linear infinite;
-        }
-
-        @keyframes seamless-scroll {
-            0% {
-                background-position: top;
-            }
-            50% {
-                background-position: bottom;
-            }
-            100% {
-                background-position: top;
-            }
+            padding-bottom: 20px; /* Ensure spacing at the bottom */
         }
 
         .header {
@@ -96,8 +84,6 @@
             padding: 20px;
             width: 80%;
             max-width: 1000px;
-            text-align: center;
-            flex: 1;
         }
 
         .content h1 {
@@ -113,45 +99,34 @@
 
         .faq-section {
             margin-bottom: 20px;
+            width: 100%;
+            max-width: 1000px;
+            text-align: left;
         }
 
         .faq-section h2 {
+            font-size: 28px;
             cursor: pointer;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 15px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
             border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .faq-section h2:hover {
+            background-color: #0056b3;
         }
 
         .faq-content {
             display: none;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
-            margin-top: 10px;
         }
 
-        .faq-section.open .faq-content {
-            display: block;
-        }
-
-        .fade-button {
-            background-color: transparent;
-            border: 2px solid white;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.5s ease, transform 0.5s ease;
-            border-radius: 5px;
-            margin: 10px 20px;
-        }
-
-        .fade-button:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: scale(1.1);
+        .faq-content p {
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -181,28 +156,42 @@
             <div class="faq-content">
                 <p>Question 1: Lorem ipsum dolor sit amet?</p>
                 <p>Answer: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <!-- Add more questions here -->
+                <p>Question 2: Nulla varius ligula eu?</p>
+                <p>Answer: Nulla varius ligula eu tincidunt vulputate.</p>
             </div>
         </div>
 
         <div class="faq-section">
             <h2 onclick="toggleSection(this)">Section 2</h2>
             <div class="faq-content">
-                <p>Question 1: Lorem ipsum dolor sit amet?</p>
-                <p>Answer: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <!-- Add more questions here -->
+                <p>Question 1: Vestibulum at eros?</p>
+                <p>Answer: Vestibulum at eros consectetur, interdum libero id, dictum sapien.</p>
+                <p>Question 2: Donec commodo quam vel?</p>
+                <p>Answer: Donec commodo quam vel urna commodo, nec vestibulum ligula ultricies.</p>
             </div>
         </div>
 
-        <!-- Add more FAQ sections here -->
-
+        <div class="faq-section">
+            <h2 onclick="toggleSection(this)">Section 3</h2>
+            <div class="faq-content">
+                <p>Question 1: Fusce commodo quam vel?</p>
+                <p>Answer: Fusce commodo quam vel urna commodo, nec vestibulum ligula ultricies.</p>
+                <p>Question 2: Aenean vestibulum ligula ultricies?</p>
+                <p>Answer: Aenean vestibulum ligula ultricies, commodo quam vel urna.</p>
+            </div>
+        </div>
     </div>
 
     <script>
-        function toggleSection(element) {
-            const section = element.parentElement;
-            section.classList.toggle('open');
+        function toggleSection(header) {
+            var content = header.nextElementSibling;
+            content.style.display = content.style.display === "none" ? "block" : "none";
         }
+
+        // Initialize all sections as closed
+        document.querySelectorAll('.faq-content').forEach(content => {
+            content.style.display = 'none';
+        });
     </script>
 </body>
 </html>
