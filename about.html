@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HastyGuard - About Us</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/MillsyDev/HastyGuard/main/images/icon.png" type="image/png">
     <style>
         html, body {
             height: 100%;
@@ -12,15 +12,8 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
-        }
-
-        body {
             background: linear-gradient(to bottom right, #add8e6, #000000);
             color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             overflow-x: hidden; /* Prevent horizontal scrolling */
             text-align: center;
         }
@@ -96,6 +89,59 @@
             margin: 20px 0;
         }
 
+        .faq-section {
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .faq-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .accordion {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-header {
+            padding: 15px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0 0 10px 10px;
+        }
+
+        .accordion.active .accordion-content {
+            display: block;
+        }
+
         .fade-button {
             background-color: transparent;
             border: 2px solid white;
@@ -115,50 +161,9 @@
             background-color: rgba(255, 255, 255, 0.2);
             transform: scale(1.1);
         }
-
-        .qa-section {
-            margin-top: 40px;
-            width: 100%;
-            max-width: 800px;
-            text-align: left;
-        }
-
-        .qa-section h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #007bff;
-            cursor: pointer;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .qa-section h2:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .qa-section .qa-content {
-            display: none;
-            margin-top: 10px;
-        }
-
-        .qa-section .qa-content .qa {
-            margin-bottom: 20px;
-        }
-
-        .qa-section .qa-content .question {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .qa-section .qa-content .answer {
-            font-size: 18px;
-            line-height: 1.5;
-        }
     </style>
 </head>
+
 <body>
     <div class="header">
         <div class="nav-left">
@@ -170,7 +175,7 @@
         <img src="images/logo.png" alt="Logo" class="logo">
         <div class="nav-right">
             <a href="login.html">Login</a>
-            <a href="signup.html" style="margin-left: 40px;">Sign Up</a>
+            <a href="signup.html" style="margin-left: 40px;">Sign Up</a> <!-- Increased margin -->
         </div>
     </div>
 
@@ -181,45 +186,44 @@
         <p>Feel free to explore our website to learn more about our services and how we can assist you. Thank you for visiting!</p>
     </div>
 
-    <div class="qa-section">
-        <h2 onclick="toggleSection(this)">Section 1: General Questions</h2>
-        <div class="qa-content">
-            <div class="qa">
-                <div class="question">Question 1: Your question here?</div>
-                <div class="answer">Answer: Your answer here.</div>
+    <div class="faq-section">
+        <h2>FAQs</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">Section 1</div>
+                <div class="accordion-content">
+                    <p>Question 1: Answer...</p>
+                    <p>Question 2: Answer...</p>
+                    <p>Question 3: Answer...</p>
+                </div>
             </div>
-            <div class="qa">
-                <div class="question">Question 2: Your question here?</div>
-                <div class="answer">Answer: Your answer here.</div>
+            <div class="accordion-item">
+                <div class="accordion-header">Section 2</div>
+                <div class="accordion-content">
+                    <p>Question 1: Answer...</p>
+                    <p>Question 2: Answer...</p>
+                    <p>Question 3: Answer...</p>
+                </div>
             </div>
-            <!-- Add more questions as needed -->
+            <div class="accordion-item">
+                <div class="accordion-header">Section 3</div>
+                <div class="accordion-content">
+                    <p>Question 1: Answer...</p>
+                    <p>Question 2: Answer...</p>
+                    <p>Question 3: Answer...</p>
+                </div>
+            </div>
         </div>
-
-        <h2 onclick="toggleSection(this)">Section 2: Services</h2>
-        <div class="qa-content">
-            <div class="qa">
-                <div class="question">Question 1: Your question here?</div>
-                <div class="answer">Answer: Your answer here.</div>
-            </div>
-            <div class="qa">
-                <div class="question">Question 2: Your question here?</div>
-                <div class="answer">Answer: Your answer here.</div>
-            </div>
-            <!-- Add more questions as needed -->
-        </div>
-
-        <!-- Repeat for more sections up to 20 spots -->
     </div>
 
     <script>
-        function toggleSection(header) {
-            const content = header.nextElementSibling;
-            if (content.style.display === "none" || content.style.display === "") {
-                content.style.display = "block";
-            } else {
-                content.style.display = "none";
-            }
-        }
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionItem = header.parentElement;
+                accordionItem.classList.toggle('active');
+            });
+        });
     </script>
 </body>
+
 </html>
