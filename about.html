@@ -11,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #add8e6, #000000);
+            background-color: #000000;
             color: white;
         }
 
@@ -20,6 +20,22 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            background: url('your-background-image.jpg') repeat-y center center / cover;
+            background-size: 100% 200%; /* Double the height */
+            background-position: top; /* Start from the top */
+            animation: seamless-scroll 10s linear infinite;
+        }
+
+        @keyframes seamless-scroll {
+            0% {
+                background-position: top;
+            }
+            50% {
+                background-position: bottom;
+            }
+            100% {
+                background-position: top;
+            }
         }
 
         .header {
