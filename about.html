@@ -12,9 +12,9 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #add8e6, #000000);
-            background-size: 200% 100vh;
-            background-repeat: repeat-x;
+            background: linear-gradient(to right, #add8e6, #000000) repeat-y;
+            background-size: 100% 100vh;
+            background-attachment: fixed;
         }
 
         body {
@@ -199,7 +199,7 @@
             content.style.display = content.style.display === "none" ? "block" : "none";
 
             // Adjust background size dynamically
-            document.body.style.backgroundSize = "200% " + (document.body.scrollHeight) + "px";
+            document.body.style.backgroundSize = "100% " + (document.body.scrollHeight) + "px";
         }
 
         document.querySelectorAll('.faq-content').forEach(content => {
@@ -207,7 +207,7 @@
         });
 
         // Initial background size adjustment
-        document.body.style.backgroundSize = "200% " + (document.body.scrollHeight) + "px";
+        document.body.style.backgroundSize = "100% " + (document.body.scrollHeight) + "px";
     </script>
 </body>
 </html>
