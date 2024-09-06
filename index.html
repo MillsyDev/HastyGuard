@@ -138,34 +138,39 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
 
-        .profile-viewer-button {
-            background-color: transparent;
-            color: white;
-            padding: 3px;
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            cursor: pointer;
+        .floating-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            border-radius: 50%;
-            transition: background-color 0.5s ease, transform 0.5s ease;
-            z-index: 1001;
+            background-color: yellow;
+            color: black;
+            font-size: 16px;
             border: none;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            z-index: 1001;
         }
 
-        .profile-viewer-button:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+        .floating-button:hover {
+            background-color: #ffcc00;
             transform: scale(1.1);
         }
 
-        .profile-viewer-button img {
-            width: 20px;
-            height: 20px;
+        .floating-button a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 70px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -196,8 +201,8 @@
         </div>
     </div>
 
-    <a href="profileviewer.html" class="profile-viewer-button" title="Profile Viewer">
-        <img src="images/viewer.png" alt="Profile Viewer">
-    </a>
+    <div class="floating-button">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScMQWSEYdG1t2SZXz2rAujfwuKRZwDUhko9J1fllndpb-LBWQ/viewform?usp=sf_link" target="_blank">10% Off</a>
+    </div>
 </body>
 </html>
